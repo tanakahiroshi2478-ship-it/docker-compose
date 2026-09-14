@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+      - name: Build Docker image
+        run: docker compose build
       - name: Validate Docker Compose
         run: docker compose config
       - name: Start containers
