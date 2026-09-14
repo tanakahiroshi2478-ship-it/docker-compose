@@ -24,7 +24,7 @@ jobs:
       - name: Test web service
         run: curl --fail http://localhost:8080
       - name: Test container networking
-        run: docker compose exec -T client wget-qO- http://web
+        run: docker compose exec -T client wget -qO- http://web
       - name: Test environment variable
         run: docker compose exec -T client printenv APP_ENV
       - name: Stop containers
